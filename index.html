@@ -59,12 +59,11 @@
 
   <div class="d-flex">
     <!-- Sidebar (Hidden on Small Screens) -->
-    <div class="sidebar d-flex flex-column d-none d-md-flex" id="desktopSidebar"></div>
+    <div class="sidebar shared-sidebar d-flex flex-column d-none d-md-flex" id="desktopSidebar"></div>
 
     <!-- Offcanvas Sidebar for Mobile -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas offcanvas-start shared-sidebar" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column" id="mobileSidebarContent"></div>

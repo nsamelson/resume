@@ -5,27 +5,27 @@ body {
 }
 
 /* Sidebar Styles */
-.sidebar {
+.shared-sidebar {
     background-color: #335384;
     color: #fff;
     min-height: 100vh;
     padding: 20px;
 }
 
-.sidebar h1 {
+.shared-sidebar h1 {
     font-size: 24px;
     font-weight: bold;
     align-self: center;
 }
 
-.sidebar a {
+.shared-sidebar a {
     color: #fff;
     text-decoration: none;
     margin: 10px 0;
     display: block;
 }
 
-.sidebar img {
+.shared-sidebar img {
     width: 250px;
     height: 250px;
     object-fit: cover;
