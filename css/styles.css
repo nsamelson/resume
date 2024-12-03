@@ -2,42 +2,51 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-  }
-  
-  /* Sidebar Styles */
-  .sidebar {
-    background-color: #632bfc;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #335384;
     color: #fff;
     min-height: 100vh;
     padding: 20px;
-  }
-  
-  .sidebar h1 {
+}
+
+.sidebar h1 {
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  .sidebar a {
+}
+
+.sidebar a {
     color: #fff;
     text-decoration: none;
     margin: 10px 0;
     display: block;
-  }
-  
-  .sidebar img {
-    width: 100px;
-    height: 100px;
+}
+
+.sidebar img {
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
+    align-self: center;
+}
+
+/* Main Content Styles */
+.main-content {
     padding: 20px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #333;
     margin: 0 10px;
     font-size: 18px;
-  }
-  
+}
+
+.btn-primary {
+    background-color: #d1533e;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b94430;
+}
