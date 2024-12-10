@@ -113,6 +113,25 @@ nav a:hover {
     display: inline-block;  /* Show the hamburger by default */
 }
 
+/*  */
+/* SECTIONS */
+/*  */
+
+/* Default background for all sections */
+section {
+    padding: 0px ; 
+}
+
+/* Alternate background colors for sections */
+section:nth-child(even) {
+    background-color: #f0f0f0; /* Very light gray for even sections */
+}
+
+section:nth-child(odd) {
+    background-color: #fff; /* White for odd sections */
+}
+
+
 /* Hero Section */
 .home {
     position: relative;
