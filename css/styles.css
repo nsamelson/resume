@@ -8,8 +8,17 @@ body {
 .shared-sidebar {
     background-color: #335384;
     color: #fff;
-    min-height: 100vh;
+    height: 100vh; /* Ensures the sidebar fills the viewport height */
+    max-height: 100vh; /* Prevents the sidebar from exceeding the viewport */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allows scrolling inside the sidebar if needed */
+    position: fixed; /* Keeps the sidebar fixed on the left */
+    top: 0;
+    left: 0;
+    width: 300px; /* Fixed width for the sidebar */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 
 .shared-sidebar h1 {
@@ -26,8 +35,7 @@ body {
 }
 
 .shared-sidebar img {
-    width: 250px;
-    height: 250px;
+    width:90%;
     object-fit: cover;
     align-self: center;
 }
@@ -53,10 +61,22 @@ nav a:hover {
 }
 
 
+
+
 /* Main Content Styles */
-/* .main-content {
-    padding: 20px;
-} */
+.main-content {
+    margin-left: 300px; /* Matches the sidebar's width */
+    flex-grow: 1;
+    overflow-y: auto; /* Ensures scrolling happens only for the main content */
+}
+
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Remove margin to eliminate the white space */
+    }
+}
 
 .btn-primary {
     background-color: #d1533e;
