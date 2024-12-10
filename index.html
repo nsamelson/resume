@@ -66,7 +66,7 @@
     <div class="offcanvas offcanvas-start shared-sidebar" tabindex="-1" id="mobileSidebar"
       aria-labelledby="mobileSidebarLabel">
       <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
       </div>
       <div class="offcanvas-body d-flex flex-column" id="mobileSidebarContent"></div>
     </div>
@@ -74,9 +74,9 @@
     <!-- Main Content -->
     <div class="main-content flex-grow-1">
       <!-- Toggle Sidebar Button for Mobile -->
-      <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
-        <i class="bi bi-list"></i>
+      <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+        <i class="bi bi-list"></i> <!-- Hamburger icon -->
+        <i class="bi bi-x" ></i> <!-- Cross icon (hidden by default) -->
       </button>
 
 
@@ -122,14 +122,28 @@
   <script>
     // Reuse the shared content
     const templateContent = document.getElementById('sharedSidebarContent').content;
-
+  
     // Populate Desktop Sidebar
     const desktopSidebar = document.getElementById('desktopSidebar');
     desktopSidebar.appendChild(templateContent.cloneNode(true));
-
+  
     // Populate Mobile Sidebar
     const mobileSidebarContent = document.getElementById('mobileSidebarContent');
     mobileSidebarContent.appendChild(templateContent.cloneNode(true));
+  
+    // Handle the toggle button and change the icon when offcanvas is opened
+    const toggleButton = document.querySelector('[data-bs-toggle="offcanvas"]');
+    const offcanvas = document.getElementById('mobileSidebar');
+    const bootstrapOffcanvas = new bootstrap.Offcanvas(offcanvas);
+  
+    toggleButton.addEventListener('click', function () {
+      toggleButton.classList.toggle('open');  // Toggle the 'open' class to switch icons
+    });
+  
+    // Reset the icon when offcanvas is closed
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+      toggleButton.classList.remove('open');  // Reset to hamburger icon when offcanvas is closed
+    });
   </script>
 
   <!-- enable tooltips for social icons -->

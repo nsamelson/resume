@@ -89,10 +89,28 @@ nav a:hover {
 
 /* Positioning the Button */
 .btn-primary.d-md-none {
-    position: absolute;  /* Absolute positioning */
-    top: 10px;           /* Adjust distance from the top */
-    left: 10px;          /* Adjust distance from the left */
-    z-index: 999;        /* Ensure it stays on top */
+    position: fixed;  /* Position the button fixed to the viewport */
+    top: 10px;        /* Position 10px from the top */
+    right: 10px;      /* Position 10px from the right */
+    z-index: 1050;    /* Make sure the button is above the offcanvas overlay */
+}
+
+/* Hide the hamburger when offcanvas is open */
+.btn-primary.open .bi-list {
+    display: none;  /* Hide hamburger icon */
+}
+
+/* Show the cross (X) icon when the offcanvas is open */
+.btn-primary.open .bi-x {
+    display: inline-block;  /* Show the cross icon */
+}
+
+.btn-primary .bi-x {
+    display: none;  /* Hide the cross by default */
+}
+
+.btn-primary .bi-list {
+    display: inline-block;  /* Show the hamburger by default */
 }
 
 /* Hero Section */
