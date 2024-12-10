@@ -87,6 +87,14 @@ nav a:hover {
     background-color: #b94430;
 }
 
+/* Positioning the Button */
+.btn-primary.d-md-none {
+    position: absolute;  /* Absolute positioning */
+    top: 10px;           /* Adjust distance from the top */
+    left: 10px;          /* Adjust distance from the left */
+    z-index: 999;        /* Ensure it stays on top */
+}
+
 /* Hero Section */
 .home {
     position: relative;
