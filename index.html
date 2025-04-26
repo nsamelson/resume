@@ -1,192 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas Samelson</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <!-- Shared Sidebar Content -->
-  <template id="sharedSidebarContent">
-    <img src="assets/cv_portrait.jpg" alt="Profile Photo" class="rounded-circle mb-4">
-    <h1>Nicolas Samelson</h1>
 
-    <!-- Social Icons Section -->
-    <div class="social-icons d-flex justify-content-center mb-4">
-      <a href="#" class="me-3" title="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
-      <a href="#" class="me-3" title="GitHub"><i class="bi bi-github fs-4"></i></a>
-      <a href="#" class="me-3" title="ResearchGate"><i class="bi bi-journal fs-4"></i></a>
-      <a href="#" class="me-3" title="ORCID"><i class="bi bi-person-circle fs-4"></i></a>
-      <a href="mailto:your.email@example.com" title="Email"><i class="bi bi-envelope fs-4"></i></a>
-    </div>
 
-    <!-- Navigation Section -->
-    <nav>
-      <a href="#home" class="d-flex align-items-center my-3">
-        <i class="bi bi-house-door me-3"></i> Home
-      </a>
-      <a href="#about" class="d-flex align-items-center my-3">
-        <i class="bi bi-person me-3"></i> About
-      </a>
-      <a href="#experience" class="d-flex align-items-center my-3">
-        <i class="bi bi-briefcase me-3"></i> Experience
-      </a>
-      <a href="#education" class="d-flex align-items-center my-3">
-        <i class="bi bi-mortarboard me-3"></i> Education
-      </a>
-      <a href="#skills" class="d-flex align-items-center my-3">
-        <i class="bi bi-tools me-3"></i> Skills
-      </a>
-      <a href="#interests" class="d-flex align-items-center my-3">
-        <i class="bi bi-heart me-3"></i> Interests
-      </a>
+  <header class="d-flex justify-content-between align-items-center">
+    <nav class="d-flex align-items-center">
+      <span class="nav-name">Nicolas Samelson</span>
+      <a href="#about">About</a>
+      <a href="#github-projects">GitHub</a>
+      <a href="#games-showcase">Games</a>
+      <a href="assets/SAMELSON Nicolas CV.pdf">CV</a>
     </nav>
+  </header>
 
-    <!-- Download CV Button -->
-    <div class="d-flex justify-content-center mt-auto">
-      <a href="assets/SAMELSON Nicolas CV.pdf" download="samelson_nicolas_cv.pdf" class="btn btn-primary btn-lg mb-4">
-        <i class="bi bi-download"></i> Download CV
-      </a>
-    </div>
-  </template>
+<!-- ABOUT SECTION -->
+  <section id="about" class="container-section about-section">
+    <div class="container">
+      <div class="row align-items-center">
 
+        <!-- LEFT COLUMN -->
+        <div class="col-md-4 text-center">
+          <img src="assets/cv_portrait.jpg" alt="Profile Picture" class="profile-pic mb-3">
+          <h5 >Research Assistant</h5>
+          <a href="">Jozef Stefan Institute</a>
+          <div class="social-icons d-flex justify-content-center mt-3">
+            <a href="#" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" target="_blank" title="ResearchGate"><i class="bi bi-journal"></i></a>
+            <a href="#" target="_blank" title="ORCID"><i class="bi bi-person-circle"></i></a>
+          </div>
+        </div>
 
-  <div class="d-flex">
-    <!-- Sidebar (Hidden on Small Screens) -->
-    <div class="sidebar shared-sidebar d-flex flex-column d-none d-md-flex" id="desktopSidebar"></div>
+        <!-- RIGHT COLUMN -->
+        <div class="col-md-8">
+          <h1>Hi, I'm Nicolas!</h1>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h2 class="lead">I’m <span class="typed" data-typed-items="a Researcher, an Engineer, a Developer"></span></h2>
+          </div>
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ligula nec odio aliquam porta. Proin vitae nunc id nulla dictum fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <div class="mt-4">
+            <h5>Education</h5>
+            <ul>
+              <li>B.Sc. in Computer Engineering - University Name</li>
+              <li>M.Sc. in Artificial Intelligence - University Name</li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Offcanvas Sidebar for Mobile -->
-    <div class="offcanvas offcanvas-start shared-sidebar" tabindex="-1" id="mobileSidebar"
-      aria-labelledby="mobileSidebarLabel">
-      <div class="offcanvas-header">
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
       </div>
-      <div class="offcanvas-body d-flex flex-column" id="mobileSidebarContent"></div>
     </div>
+  </section>
 
-    <!-- Main Content -->
-    <div class="main-content flex-grow-1">
-      <!-- Toggle Sidebar Button for Mobile -->
-      <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
-        <i class="bi bi-list"></i> <!-- Hamburger icon -->
-        <i class="bi bi-x" ></i> <!-- Cross icon (hidden by default) -->
-      </button>
-
-
-
-
-      <!-- Home Section -->
-      <section id="home" class="home section position-relative text-white">
-        <!-- Background Image -->
-        <div class="home-bg">
-          <img src="assets/mount_cook.png" alt="Background Image" class="img-fluid">
-        </div>
-
-        <!-- Content Overlay -->
-        <div class="container position-absolute start-0 ps-4 text-start" data-aos="fade-up" data-aos-delay="100">
-          <h1 class="display-3 fw-bold">Hello, I’m <span class="highlight">Nicolas Samelson</span></h1>
-          <p class="lead">I’m <span class="typed"
-              data-typed-items="a Researcher, an Engineer, a Developer, a Creator"></span></p>
-        </div>
-      </section>
-
-      <section id="about" class="about section">
-        <h1>About</h2>
-        <p>
-          blabla
-        </p>
-      </section>
-
-      <section id="experience" class="experience section">
-        <h2>Experience:</h2>
-        <p>
-          blabla
-        </p>
-      </section>
-
-      <section id="skills" class="skills section">
-        <h1>Skills</h2>
-        <p>
-          blabla
-        </p>
-      </section>
-
-      <section id="interests" class="interests section">
-        <h2>Interests:</h2>
-        <p>
-          blabla
-        </p>
-      </section>
-
-
+  <!-- GITHUB PROJECTS SECTION -->
+  <section id="github-projects" class="container-section projects-section">
+    <h2 class="text-center">GitHub Projects</h2>
+    <div class="row">
+      <!-- GitHub repositories will be injected here -->
     </div>
-  </div>
+  </section>
 
+  <!-- GAMES SECTION -->
+  <section id="games-showcase" class="container-section games-section">
+    <h2 class="text-center">Itch.io Games</h2>
+    <div class="row">
+      <!-- Itch.io games will be embedded here -->
+    </div>
+  </section>
 
-  <!-- SCRIPTS -->
-  <!-- Bootstrap stuff -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Switch from sidebar to offcanvas when in mobile mode -->
-  <script>
-    // Reuse the shared content
-    const templateContent = document.getElementById('sharedSidebarContent').content;
-  
-    // Populate Desktop Sidebar
-    const desktopSidebar = document.getElementById('desktopSidebar');
-    desktopSidebar.appendChild(templateContent.cloneNode(true));
-  
-    // Populate Mobile Sidebar
-    const mobileSidebarContent = document.getElementById('mobileSidebarContent');
-    mobileSidebarContent.appendChild(templateContent.cloneNode(true));
-  
-    // Handle the toggle button and change the icon when offcanvas is opened
-    const toggleButton = document.querySelector('[data-bs-toggle="offcanvas"]');
-    const offcanvas = document.getElementById('mobileSidebar');
-    const bootstrapOffcanvas = new bootstrap.Offcanvas(offcanvas);
-  
-    toggleButton.addEventListener('click', function () {
-      toggleButton.classList.toggle('open');  // Toggle the 'open' class to switch icons
-    });
-  
-    // Reset the icon when offcanvas is closed
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      toggleButton.classList.remove('open');  // Reset to hamburger icon when offcanvas is closed
-    });
-  </script>
-
-  <!-- enable tooltips for social icons -->
-  <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
-
-  <!-- animated text -->
-  <script>
-    AOS.init();
-    new Typed('.typed', {
-      strings: ["a Researcher", "an Engineer", "a Developer"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 2000,
-      loop: true
-    });
-  </script>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  new Typed('.typed', {
+    strings: ["a Researcher", "an Engineer", "a Developer"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 2000,
+    loop: true
+  });
+</script>
 
 </body>
-
 </html>
