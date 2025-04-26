@@ -11,29 +11,48 @@ body {
     padding: 1rem 2rem;
   }
 
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
+  nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #ffd700;
+  }
+
+  .nav-name {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 2rem;
   }
 
   .container-section {
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 4rem 2rem;
+    margin: 0;
   }
 
   .about-section {
-    background-color: rgba(255, 215, 0, 0.05);
+    background-color: #ffffff; /* soft light blue */
   }
 
+  .about-section h1 {
+    color:  #0e4295; /* softer, more enticing blue */
+  }
+
+  /* .about-section h2 {
+    color:  #335384; 
+  } */
+
   .projects-section {
-    background-color: rgba(51, 83, 132, 0.05);
+    background-color: rgba(51, 83, 132, 0.1);
   }
 
   .games-section {
-    background-color: rgba(255, 215, 0, 0.05);
+    background-color: rgba(255, 215, 0, 0.1);
   }
 
   .btn-primary {
@@ -52,10 +71,21 @@ body {
   }
 
   .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #ffd700;
     margin-bottom: 1rem;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  section:first-of-type {
+    margin-top: 0;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
   }
