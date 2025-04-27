@@ -70,6 +70,13 @@ body {
     margin: 0 10px;
   }
 
+  .custom-icon {
+    color: #335384;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+  
+
   .profile-pic {
     width: 200px;
     height: 200px;
