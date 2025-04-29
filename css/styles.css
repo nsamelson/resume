@@ -96,3 +96,22 @@ body {
   section:last-of-type {
     margin-bottom: 0;
   }
+
+  .card {
+    width: 100%;
+    /* aspect-ratio: 1 / 1;  */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border-radius: 10px;
+  }
+  
+  .card-title a {
+    text-decoration: none;
+    color: #335384;
+  }
+  
+  .card-title a:hover {
+    color: #d1533e;
+  }
+  

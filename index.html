@@ -83,11 +83,24 @@
 
   <!-- GITHUB PROJECTS SECTION -->
   <section id="github-projects" class="container-section projects-section">
-    <h2 class="text-center">GitHub Projects</h2>
-    <div class="row">
-      <!-- GitHub repositories will be injected here -->
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <!-- Title Column -->
+        <div class="col-md-4 text-center ">
+          <h2>GitHub Projects</h2>
+        </div>
+  
+        <!-- Cards Column -->
+        <div class="col-md-8">
+          <div class="row" id="github-cards-row">
+            <!-- Cards will be injected here by JS -->
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  
+  
 
   <!-- GAMES SECTION -->
   <section id="games-showcase" class="container-section games-section">
@@ -111,6 +124,6 @@
     loop: true
   });
 </script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
