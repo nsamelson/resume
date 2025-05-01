@@ -115,3 +115,8 @@ body {
     color: #d1533e;
   }
   
+  iframe {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
