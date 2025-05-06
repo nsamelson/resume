@@ -1,17 +1,19 @@
-
-// fetch github repos
 document.addEventListener('DOMContentLoaded', () => {
-  const githubUsername = 'nsamelson';
-  // const target = document.querySelector('#github-projects .row');
   const target = document.getElementById('github-cards-row');
 
-  const whitelist = ['Freshwater-Modelling', 'particle-swarm-optimization','Battery-degradation','equation-similarities','advent-of-code-24','5eiai50_AI_OCR'];
+  const reposToShow = [
+    'nsamelson/Freshwater-Modelling',
+    'nsamelson/particle-swarm-optimization',
+    '16205/Sid_project',
+    'nsamelson/Battery-degradation ',
+    'nsamelson/advent-of-code-24',
+    'nsamelson/5eiai50_AI_OCR'
+  ];
 
-  fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=12`)
-    .then(response => response.json())
-    .then(repos => {repos
-      .filter(repo => whitelist.includes(repo.name))
-      .forEach(repo => {
+  reposToShow.forEach(repoFullName => {
+    fetch(`https://api.github.com/repos/${repoFullName}`)
+      .then(response => response.json())
+      .then(repo => {
         const col = document.createElement('div');
         col.className = 'col-md-4 mb-4';
         col.innerHTML = `
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
         target.appendChild(col);
-      });
-    })
-    .catch(err => console.error('GitHub fetch error:', err));
+      })
+      .catch(err => console.error(`Failed to load ${repoFullName}:`, err));
+  });
 });
